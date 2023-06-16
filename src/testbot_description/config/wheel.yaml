@@ -1,0 +1,2 @@
+type: "position_controllers/JointPositionController"
+joint: wheel_rear_left_joint

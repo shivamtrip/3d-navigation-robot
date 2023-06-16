@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/shivam/catkin_ws/devel/.private/cartographer_ros_msgs/setup.sh

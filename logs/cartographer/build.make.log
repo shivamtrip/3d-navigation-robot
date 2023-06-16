@@ -1,0 +1,133 @@
+[35m[1mScanning dependencies of target gtest[0m
+[35m[1mScanning dependencies of target cartographer_detect_changes[0m
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/transform/proto/transform.proto[0m
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/ground_truth/proto/relations.proto[0m
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/common/proto/ceres_solver_options.proto[0m
+[  0%] Built target cartographer_detect_changes
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/grid_2d.proto[0m
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/cell_limits_2d.proto[0m
+[  0%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/grid_2d_options.proto[0m
+[  1%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/connected_components.proto[0m
+[  2%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/local_trajectory_builder_options_2d.proto[0m
+[  2%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/local_trajectory_builder_options_3d.proto[0m
+[  2%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/map_builder_options.proto[0m
+[  2%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/hybrid_grid.proto[0m
+[  3%] [32mBuilding CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[  3%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/normal_estimation_options_2d.proto[0m
+[  3%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/map_limits.proto[0m
+[  4%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/motion_filter_options.proto[0m
+[  4%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/pose_graph.proto[0m
+[  4%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/pose_extrapolator_options.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/pose_graph/constraint_builder_options.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/pose_graph/optimization_problem_options.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/pose_graph_options.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/probability_grid.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/range_data_inserter_options.proto[0m
+[  5%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/range_data_inserter_options_3d.proto[0m
+[  6%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/probability_grid_range_data_inserter_options_2d.proto[0m
+[  6%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/scan_matching/ceres_scan_matcher_options_2d.proto[0m
+[  7%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/scan_matching/ceres_scan_matcher_options_3d.proto[0m
+[  7%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/scan_matching/fast_correlative_scan_matcher_options_2d.proto[0m
+[  7%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/scan_matching/real_time_correlative_scan_matcher_options.proto[0m
+[  8%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/serialization.proto[0m
+[  8%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/scan_matching/fast_correlative_scan_matcher_options_3d.proto[0m
+[  8%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/submap_visualization.proto[0m
+[  9%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/submaps_options_2d.proto[0m
+[  9%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/submap.proto[0m
+[  9%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/submaps_options_3d.proto[0m
+[  9%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/trajectory.proto[0m
+[  9%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/trajectory_builder_options.proto[0m
+[ 10%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/trajectory_node_data.proto[0m
+[ 10%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/tsdf_2d.proto[0m
+[ 10%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/sensor/proto/adaptive_voxel_filter_options.proto[0m
+[ 10%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/mapping/proto/tsdf_range_data_inserter_options_2d.proto[0m
+[ 11%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/sensor/proto/sensor.proto[0m
+[ 11%] [34m[1mRunning C++ protocol buffer compiler on /home/shivam/catkin_ws/src/src/cartographer/cartographer/transform/proto/timestamped_transform.proto[0m
+[35m[1mScanning dependencies of target cartographer[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/configuration_file_resolver.cc.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/fixed_ratio_sampler.cc.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/histogram.cc.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/internal/ceres_solver_options.cc.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/internal/testing/thread_pool_for_testing.cc.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/lua_parameter_dictionary.cc.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/task.cc.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/thread_pool.cc.o[0m
+[ 13%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/common/time.cc.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/ground_truth/autogenerate_ground_truth.cc.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/ground_truth/relations_text_file.cc.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/color.cc.o[0m
+[ 14%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/coloring_points_processor.cc.o[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/counting_points_processor.cc.o[0m
+[ 15%] [32m[1mLinking CXX static library ../lib/libgtest.a[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/draw_trajectories.cc.o[0m
+[ 15%] Built target gtest
+[35m[1mScanning dependencies of target gmock[0m
+[ 16%] [32mBuilding CXX object gmock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/file_writer.cc.o[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/fixed_ratio_sampling_points_processor.cc.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/frame_id_filtering_points_processor.cc.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/hybrid_grid_points_processor.cc.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/image.cc.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/intensity_to_color_points_processor.cc.o[0m
+[ 18%] [32m[1mLinking CXX static library ../lib/libgmock.a[0m
+[ 18%] Built target gmock
+[35m[1mScanning dependencies of target gmock_main[0m
+[ 18%] [32mBuilding CXX object gmock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[ 18%] [32m[1mLinking CXX static library ../lib/libgmock_main.a[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/internal/in_memory_proto_stream.cc.o[0m
+[ 18%] Built target gmock_main
+[ 18%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/internal/mapping_state_serialization.cc.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/internal/pbstream_info.cc.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/internal/pbstream_migrate.cc.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/min_max_range_filtering_points_processor.cc.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/outlier_removing_points_processor.cc.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/pcd_writing_points_processor.cc.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/ply_writing_points_processor.cc.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/points_batch.cc.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/points_processor_pipeline_builder.cc.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/probability_grid_points_processor.cc.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/proto_stream.cc.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/proto_stream_deserializer.cc.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/serialization_format_migration.cc.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/submap_painter.cc.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/vertical_range_filtering_points_processor.cc.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/xray_points_processor.cc.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/io/xyz_writing_points_processor.cc.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/2d/grid_2d.cc.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/2d/probability_grid.cc.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/2d/probability_grid_range_data_inserter_2d.cc.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/2d/submap_2d.cc.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/3d/range_data_inserter_3d.cc.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/3d/submap_3d.cc.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/detect_floors.cc.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/imu_tracker.cc.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/local_slam_result_2d.cc.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/local_trajectory_builder_2d.cc.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/local_trajectory_builder_options_2d.cc.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/normal_estimation_2d.cc.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/overlapping_submaps_trimmer_2d.cc.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/pose_graph_2d.cc.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/ray_to_pixel_mask.cc.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/ceres_scan_matcher_2d.cc.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/correlative_scan_matcher_2d.cc.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/fast_correlative_scan_matcher_2d.cc.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/occupied_space_cost_function_2d.cc.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/real_time_correlative_scan_matcher_2d.cc.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/scan_matching/tsdf_match_cost_function_2d.cc.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/tsd_value_converter.cc.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/tsdf_2d.cc.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/2d/tsdf_range_data_inserter_2d.cc.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/local_slam_result_3d.cc.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/local_trajectory_builder_3d.cc.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/local_trajectory_builder_options_3d.cc.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/pose_graph_3d.cc.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/ceres_scan_matcher_3d.cc.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/fast_correlative_scan_matcher_3d.cc.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/intensity_cost_function_3d.cc.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/low_resolution_matcher.cc.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/precomputation_grid_3d.cc.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/real_time_correlative_scan_matcher_3d.cc.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/3d/scan_matching/rotational_scan_matcher.cc.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/collated_trajectory_builder.cc.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/connected_components.cc.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/cartographer.dir/cartographer/mapping/internal/constraints/constraint_builder.cc.o[0m

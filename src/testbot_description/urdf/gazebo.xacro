@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Red</material>
+    </gazebo>
+ 
+
+    <!-- Gazebo plugin for ROS Control -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+
+    <xacro:macro name="wheel_trans" params="name">
+
+        <transmission name="wheel_${name}_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <actuator name="wheel_${name}_motor">
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+            <joint name="wheel_${name}_joint">
+                <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+            </joint>
+        </transmission>
+
+        <gazebo reference="wheel_${name}_link">
+            <mu1 value="200.0"/>
+            <mu2 value="100.0"/>
+            <kp value="10000000.0" />
+            <kd value="1.0" />
+            <material>Gazebo/DarkGrey</material>
+        </gazebo>
+
+    </xacro:macro>
+
+    <xacro:wheel_trans name ="rear_right"/>
+    <xacro:wheel_trans name ="rear_left"/>
+    <xacro:wheel_trans name ="front_right"/>
+    <xacro:wheel_trans name ="front_left"/>
+
+
+</robot>
