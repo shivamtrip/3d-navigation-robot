@@ -1,4 +1,4 @@
-# Differential-Drive Mobile Robot with RGBD Camera that performs 3D Navigation using RTABMAP SLAM / Octomap
+# 3D Visual Navigation with a Mobile Robot and RGBD Camera (using RTAB-MAP SLAM / Octomap)
 
 
 
