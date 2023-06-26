@@ -1,8 +1,0 @@
-[ 20%] [34m[1mAutomatic MOC for target octomap_rviz_plugins[0m
-[ 20%] Built target octomap_rviz_plugins_autogen
-[35m[1mScanning dependencies of target octomap_rviz_plugins[0m
-[ 40%] [32mBuilding CXX object CMakeFiles/octomap_rviz_plugins.dir/octomap_rviz_plugins_autogen/mocs_compilation.cpp.o[0m
-[ 60%] [32mBuilding CXX object CMakeFiles/octomap_rviz_plugins.dir/src/occupancy_grid_display.cpp.o[0m
-[ 80%] [32mBuilding CXX object CMakeFiles/octomap_rviz_plugins.dir/src/occupancy_map_display.cpp.o[0m
-[100%] [32m[1mLinking CXX shared module /home/shivam/catkin_ws/devel/.private/octomap_rviz_plugins/lib/liboctomap_rviz_plugins.so[0m
-[100%] Built target octomap_rviz_plugins
