@@ -1,1 +1,0 @@
-/home/shivam/catkin_ws/devel/.private/cartographer_ros_msgs/lib/pkgconfig/cartographer_ros_msgs.pc
