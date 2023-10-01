@@ -3,14 +3,13 @@
 
     <xacro:property name="constant" value="0.083"/>
     <xacro:property name="mass_base" value="1.0"/>
-    <xacro:property name="width_base" value="0.6"/>
-    <xacro:property name="height_base" value="0.5"/>
+    <xacro:property name="width_base" value="0.4"/>
+    <xacro:property name="height_base" value="0.3"/>
     <xacro:property name="depth_base" value="0.1"/>
 
     <xacro:property name="mass_wheel" value="0.3"/>
-    <xacro:property name="height_wheel" value="0.07"/>
-    <xacro:property name="radius_wheel" value="0.1"/>
-
+    <xacro:property name="height_wheel" value="0.05"/>
+    <xacro:property name="radius_wheel" value="0.08"/>
 
 
     <!-- Robot Base  -->
@@ -31,7 +30,7 @@
         </collision>
         <inertial>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-            <mass value="1.0"/>
+            <mass value="${mass_base}"/>
             <inertia ixx="${constant * mass_base * (depth_base*depth_base + height_base*height_base)}" ixy="0.0" ixz="0.0" 
                      iyy="${constant * mass_base * (depth_base*depth_base + width_base*width_base)}" iyz="0.0" 
                      izz="${constant * mass_base * (height_base*height_base + width_base*width_base)}"/>
@@ -40,12 +39,12 @@
     </link>
     
     <!-- Macro for creating wheel -->
-    <xacro:macro name="wheel" params="name x y type">
+    <xacro:macro name="wheel" params="name x y type joint_type">
         
         <link name="wheel_${name}_link">
             <visual>
                 <geometry>
-                    <!-- <mesh filename="package://testbot_description/meshes/${type}_tire.stl" scale="0.005 0.005 0.005"/> -->
+                    <!-- <mesh filename="package://testbot_description/meshes/${type}_tire.stl" scale="0.003 0.003 0.003"/> -->
                     <cylinder radius="${radius_wheel}" length="${height_wheel}"/>
                 </geometry>
                 <material name="LightGrey">
@@ -56,18 +55,19 @@
                 <geometry>
                     <!-- <mesh filename="package://testbot_description/meshes/${type}_tire.stl" scale="0.005 0.005 0.005"/> -->
                     <cylinder radius="${radius_wheel}" length="${height_wheel}"/>
+                    <!-- <origin xyz="0.0 0.0 0.0" rpy="0.0 1.57 0.0"/> -->
                 </geometry>
             </collision>
             <inertial>
-                <mass value="0.5"/>
+                <mass value="${mass_wheel}"/>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <inertia ixx="${constant * mass_wheel * (3 * radius_wheel * radius_wheel + height_wheel * height_wheel)}" ixy="0.0" ixz="0.0" 
-                iyy="${constant * mass_wheel * (3 * radius_wheel * radius_wheel + height_wheel * height_wheel)}" iyz="0.0" 
-                izz="${0.5 * mass_wheel * radius_wheel * radius_wheel}"/>
+                         iyy="${constant * mass_wheel * (3 * radius_wheel * radius_wheel + height_wheel * height_wheel)}" iyz="0.0" 
+                         izz="${0.5 * mass_wheel * radius_wheel * radius_wheel}"/>
             </inertial>
         </link> 
 
-        <joint name="wheel_${name}_joint" type="continuous">
+        <joint name="wheel_${name}_joint" type="${joint_type}">
             <parent link="base_link"/>
             <child link="wheel_${name}_link"/>
             <!-- <origin xyz="${x} ${y} 0" rpy="0 0 0"/>
@@ -79,16 +79,23 @@
     </xacro:macro>
 
     <!-- Wheels (created using macro)-->
-    <xacro:wheel name ="rear_right" x ="0.30" y="0.285" type="right"/>
-    <xacro:wheel name ="rear_left" x ="0.30" y="-0.285" type="left"/>
-    <xacro:wheel name ="front_right" x ="-0.30" y="0.285" type="right"/>
-    <xacro:wheel name ="front_left" x ="-0.30" y="-0.285" type="left"/>
+    <xacro:wheel name ="rear_right" x ="${width_base/2}" y="${height_base/2 + height_wheel/2}" type="right" joint_type="fixed"/>
+    <xacro:wheel name ="rear_left" x ="${width_base/2}" y="-${height_base/2 + height_wheel/2}" type="left" joint_type="fixed"/>
+    <xacro:wheel name ="front_right" x ="-${width_base/2}" y="${height_base/2 + height_wheel/2}" type="right" joint_type="continuous"/>
+    <xacro:wheel name ="front_left" x ="-${width_base/2}" y="-${height_base/2 + height_wheel/2}" type="left" joint_type="continuous"/>
 
 
-    <link name="realsense_camera_link">
+    <joint name="camera_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+        <origin xyz="-${width_base/2 - 0.0125} 0 ${depth_base/2 + 0.0125}" rpy="0 0 3.14"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="camera_link">
         <visual>
             <geometry>
-                <box size="0.09 0.025 0.025" />
+                <box size="0.025 0.09 0.025" />
             </geometry>
             <material name="LightGrey">
                 <color rgba="0.7 0.7 0.7 1.0"/>
@@ -106,15 +113,16 @@
         </inertial>
     </link>
 
-    <joint name="realsense_camera_joint" type="fixed">
-        <parent link="base_link"/>
-        <child link="realsense_camera_link"/>
-        <origin xyz="-0.2875 0 0.0625" rpy="0 0 -1.57"/>
-        <axis xyz="0 0 0"/>
-    </joint>
+  <!-- <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="-0.032 0 0.068" rpy="0 0 0"/>
+  </joint>
+
+  <link name="imu_link"/> -->
 
     <xacro:include filename="gazebo.xacro"/>
-    <xacro:include filename="testbot_d435i.xacro"/>
+    <!-- <xacro:include filename="testbot_d435i.xacro"/> -->
 
 
 </robot>

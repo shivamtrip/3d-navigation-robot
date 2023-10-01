@@ -1,0 +1,6 @@
+devel_space: /home/shivam/3d-navigation-robot/devel
+install: false
+install_space: /home/shivam/3d-navigation-robot/install
+profile: default
+source_space: /home/shivam/3d-navigation-robot/src
+workspace: /home/shivam/3d-navigation-robot

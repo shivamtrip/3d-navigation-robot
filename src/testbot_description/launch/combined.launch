@@ -1,0 +1,52 @@
+<launch>
+
+    <!-- This file opens both Rviz and Gazebo -->
+
+    <arg name="x" default="-2"/>
+    <arg name="y" default="-0.5"/>
+    <arg name="z" default="0"/>
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="3.14"/>
+
+    <param name="robot_description" command="xacro '$(find testbot_description)/urdf/my_robot.urdf.xacro'"/>
+    <arg name="rviz_config_file" default="$(find testbot_description)/rviz/robot.rviz"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="30.0" />
+    </node>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world"/>
+        <arg name="paused" default="false"/>
+        <arg name="use_sim_time" default="true"/>
+        <arg name="gui" default="true"/>
+        <arg name="headless" default="false"/>
+        <arg name="debug" default="false"/>
+    </include>
+
+    <rosparam command="load"
+            file="$(find testbot_description)/config/joints.yaml"
+            ns="testbot_joint_state_controller" />
+
+  <rosparam command="load"
+            file="$(find testbot_description)/config/diffdrive.yaml"
+            ns="testbot_diff_drive_controller" />
+
+    <node name="testbot_controller_spawner" pkg="controller_manager" type="spawner"
+        args="testbot_joint_state_controller testbot_diff_drive_controller" />
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawning_urdf"  
+          args="-urdf -model rover -param robot_description -x $(arg x) -y $(arg y) -Y $(arg yaw)" />
+          
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" />
+
+    <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering">
+    <param name="default_topic" value="testbot_diff_drive_controller/cmd_vel"/>
+    </node>
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="ime_slam_camera_tf" 
+    args="0 0 0 -1.58 0 -1.58 /base_link /camera_link 100"/> -->
+
+
+</launch>

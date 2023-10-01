@@ -1,0 +1,12 @@
+Symlinking /home/shivam/3d-navigation-robot/devel/./env.sh
+Symlinking /home/shivam/3d-navigation-robot/devel/./setup.zsh
+Symlinking /home/shivam/3d-navigation-robot/devel/./cmake.lock
+Symlinking /home/shivam/3d-navigation-robot/devel/./local_setup.sh
+Symlinking /home/shivam/3d-navigation-robot/devel/./setup.sh
+Symlinking /home/shivam/3d-navigation-robot/devel/./local_setup.zsh
+Symlinking /home/shivam/3d-navigation-robot/devel/./setup.bash
+Symlinking /home/shivam/3d-navigation-robot/devel/./_setup_util.py
+Symlinking /home/shivam/3d-navigation-robot/devel/./local_setup.bash
+Symlinking /home/shivam/3d-navigation-robot/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/shivam/3d-navigation-robot/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/shivam/3d-navigation-robot/devel/lib/pkgconfig/catkin_tools_prebuild.pc

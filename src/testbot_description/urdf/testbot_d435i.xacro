@@ -10,10 +10,10 @@
        up and down (- down / + up)
        sideways (- right / + left)
        " -->
-  <xacro:sensor_d435i parent="realsense_camera_link" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+  <xacro:sensor_d435i parent="testbot_camera_link" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
     <origin
       xyz="0 0 0.0125"
-      rpy="0.0 0.0 -1.57" />
+      rpy="0.0 0.0 0.0" />
   </xacro:sensor_d435i>
   
 </robot>
