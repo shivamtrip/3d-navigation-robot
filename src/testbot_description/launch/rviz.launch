@@ -1,10 +1,58 @@
 <launch>
 
-  <param name="robot_description" command="xacro '$(find testbot_description)/urdf/my_robot.urdf.xacro'"/>
-  <arg name="rviz_config_file" default="$(find testbot_description)/config/robot.rviz"/>
+    <!-- This file starts RTAB-MAP, Rviz and Gazebo -->
 
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
-  <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui"/>
+      <!-- Robot pose -->
+    <arg name="x" default="-2"/>
+    <arg name="y" default="-0.5"/>
+    <arg name="z" default="0"/>
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="3.14"/>
 
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" />
+    <param name="robot_description" command="xacro '$(find testbot_description)/urdf/my_robot.urdf.xacro'"/>
+    <arg name="rviz_config_file" default="$(find testbot_description)/rviz/robot.rviz"/>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="30.0" />
+    </node>
+
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find testbot_description)/worlds/willow_garage.world"/>
+        <arg name="paused" default="false"/>
+        <arg name="use_sim_time" default="true"/>
+        <arg name="gui" default="true"/>
+        <arg name="headless" default="false"/>
+        <arg name="debug" default="false"/>
+    </include>
+
+    <include file="$(find testbot_description)/launch/rtabmap.launch"/> -->
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+    <!-- <rosparam command="load"
+            file="$(find testbot_description)/config/joints.yaml"
+            ns="testbot_joint_state_controller" />
+
+    <rosparam command="load"
+            file="$(find testbot_description)/config/diffdrive.yaml"
+            ns="testbot_diff_drive_controller" /> -->
+
+    <!-- <node name="testbot_controller_spawner" pkg="controller_manager" type="spawner"
+        args="testbot_joint_state_controller testbot_diff_drive_controller" /> -->
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawning_urdf"  
+          args="-urdf -model rover -param robot_description -x $(arg x) -y $(arg y) -Y $(arg yaw)" />
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_config_file)" />
+
+    <node name="rqt_robot_steering" pkg="rqt_robot_steering" type="rqt_robot_steering">
+        <param name="default_topic" value="/cmd_vel"/>
+    </node>
+
+    <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+      <rosparam command="load" file="$(find testbot_description)/config/robot_localization.yaml" />
+    </node> -->
+
+
 </launch>

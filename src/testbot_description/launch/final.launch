@@ -30,6 +30,7 @@
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
 
+<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 map world 100" />
     <!-- <rosparam command="load"
             file="$(find testbot_description)/config/joints.yaml"
             ns="testbot_joint_state_controller" />
